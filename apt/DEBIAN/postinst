@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd /tmp/native-client
+
+get_latest_release() {
+  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+    grep '"tag_name":' |                                            # Get tag line
+    sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+}
+TAG=`get_latest_release andy-portmen/native-client`
+
+wget https://github.com/andy-portmen/native-client/releases/download/$TAG/linux.zip
+unzip linux.zip
+./install.sh
