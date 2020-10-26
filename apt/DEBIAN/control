@@ -5,6 +5,5 @@ Priority: optional
 Architecture: all
 Essential: no
 Installed-Size: 20480
-Maintainer: https://github.com/andy-portmen/native-client
+Maintainer: Andy Portmen
 Description: Native Messaging component for Windows, Linux, and Mac OS that is written in NodeJS
-Depends: curl, wget, unzip
