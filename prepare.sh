@@ -12,6 +12,6 @@ zip "src_no_node.zip" -9 --symlinks -r * -x "*.DS_Store" -x "*/node/*/node" "win
 
 # debian package
 unzip linux.zip -d apt/opt/native-client/
-cp apt/usr/share/uninstall.sh apt/DEBIAN/postrm
+cp apt/opt/uninstall.sh apt/DEBIAN/postrm
 dpkg-deb --build apt
 mv apt.deb linux.deb
