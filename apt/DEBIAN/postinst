@@ -1,5 +1,4 @@
 #!/bin/sh
 
-cd /tmp/native-client/
-
-./install.sh
+/usr/share/native-client/install.sh
+rm -rf /usr/share/native-client/
